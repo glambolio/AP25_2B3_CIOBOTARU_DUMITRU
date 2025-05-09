@@ -10,6 +10,7 @@ public class DrawingPanel extends JPanel
 private final MainFrame frame;
 private int canvasWidth = 400, canvasHeight = 400;
 private int dotSize = 10;
+MouseClickHandler mouseHandler = new  MouseClickHandler();
 // The values above may be constant or configurable
 //...
 // Data structures storing the dots and the lines.
@@ -38,7 +39,7 @@ public void paintDots(Graphics g)
 	for(int i = 1; i <= frame.board.getDotCount() ; i++)
 	{
 		//Imi cer sincere scuze pentru sintaxa asta 
-		g.drawOval(Math.round(frame.board.getDots()[i].getX()), Math.round(frame.board.getDots()[i].getY()), dotSize, dotSize);
+		g.fillOval(Math.round(frame.board.getDots()[i].getX()), Math.round(frame.board.getDots()[i].getY()), dotSize, dotSize);
 	}
 }
 
@@ -60,6 +61,16 @@ public void paintLines(Graphics g)
 			}
 		}
 	}
+}
+
+
+public int getDotSize() {
+	return dotSize;
+}
+
+
+public void setDotSize(int dotSize) {
+	this.dotSize = dotSize;
 }
 
 

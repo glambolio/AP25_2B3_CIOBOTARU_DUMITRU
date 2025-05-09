@@ -32,6 +32,7 @@ add(canvas, BorderLayout.CENTER);
 add(controlPanel, BorderLayout.PAGE_END);
 add(configPanel, BorderLayout.PAGE_START); 
 
+canvas.addMouseListener(canvas.mouseHandler);
 
 //invoke the layout manager
 pack();

@@ -2,6 +2,7 @@ package pachet;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+
 public class ConfigPanel extends JPanel {
 final MainFrame frame;
 JLabel label;
